@@ -1,5 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, Button } from 'react-native';
+import {HeaderButtons, Item} from 'react-navigation-header-buttons';
+import HeaderButton from '../components/HeaderConfigurationButton';
 
 const HomeThoughtsScreen = props => {
 return(
@@ -18,8 +20,21 @@ return(
 );
 };
 
-HomeThoughtsScreen.navigationOptions = {
-    headerTitle: 'Home'
+HomeThoughtsScreen.navigationOptions = navigationdata => {
+    return{
+        headerTitle: 'Home',
+        headerRight: (
+        <HeaderButtons HeaderButtonComponent={HeaderButton}>
+            <Item 
+                title='cfg' 
+                iconName='settings' 
+                onPress={() =>{
+                    console.log('Pressed the cfg button');
+                }}
+            />
+        </HeaderButtons>
+        )
+    };
 };
 
 const styles= StyleSheet.create({

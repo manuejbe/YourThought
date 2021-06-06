@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState } from 'react';
-import { StyleSheet, } from 'react-native';
+import { StyleSheet } from 'react-native';
 import * as Font from 'expo-font';
 import AppLoading from 'expo-app-loading';
 
@@ -28,12 +28,3 @@ export default function App() {
   
   return <MainNavigator/>;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
